@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script> (function() { const prefs = JSON.parse(localStorage.getItem("preferences")); const theme = prefs?.theme || "light"; if (theme === "dark") { document.documentElement.classList.add("dark"); } else { document.documentElement.classList.remove("dark"); } })(); </script>   
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />     
+        <link href="styles/style.css" rel="stylesheet" />
+        <link href="styles/carte.css" rel="stylesheet" />
+        <title>ENI École Informatique - Carte</title>
+    </head>
+
+    <body data-page="map">
+
+        <header>
+
+            <img src="Ressources/logo.png" alt="Logo de l'ENI">
+
+            <h1>Promo EDWM2511FT</h1>
+
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="preferences.html">Préférences</a></li>
+                    <li><a href="carte.html">Carte</a></li>
+                    <li><a href="informations.html">Informations</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+            
+            <div id="map-container">
+                <div id="map"></div>                    
+            </div>
+
+            <a class="return-home" href="index.html">Retour à la page d'Accueil</a>
+
+        </main>
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script src="script/carte.js"></script>
+
+    </body>
+
+</html>

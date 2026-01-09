@@ -1,0 +1,36 @@
+fieldset {
+    border: 0px;
+    margin-top: 7vh;
+    width: 50%
+}
+
+legend {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 600;
+    margin-bottom: 10vh;
+}
+
+#grid-container-form {
+    display: grid;
+    grid-template-columns: 2fr 0.75fr;
+    grid-row-gap: 10vh;
+    margin-bottom: 10vh;
+}
+
+select {
+    padding: 0.3vw 0.5vw;
+    border: 2px solid;
+    max-width: max-content;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+}
+
+#theme {
+    font-size: 1rem;
+    font-weight: 400;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+        <script>(function() {const prefs = JSON.parse(localStorage.getItem("preferences")) || {};const theme = prefs?.theme || "light";if (theme === "dark") {document.documentElement.classList.add("dark");}})(); </script> 
+        <link href="styles/style.css" rel="stylesheet" />
+        <link href="styles/students.css" rel="stylesheet" />
+         <link href="styles/modal.css" rel="stylesheet" />
+        <title>ENI École Informatique - Promotion EDWM2511FT</title>
+    </head>
+
+    <body data-page="home">
+
+        <header>
+
+            <!-- en-tête avec logo, titre et navigation -->
+            <img src="Ressources/logo.png" alt="Logo de l'ENI">
+            <h1>Promo EDWM2511FT</h1>
+
+            <nav aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="preferences.html">Préférences</a></li>
+                    <li><a href="carte.html">Carte</a></li>
+                    <li><a href="informations.html">Informations</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- les input avec choix d'affichage -->
+        <div class="display-div" role="group" aria-label="Choix du type d'affichage">
+            <p>Type d'affichage</p>
+            <input type="radio" name="display" id="rad-list" checked>
+            <label for="rad-list">Liste</label>
+            <input type="radio" name="display" id="rad-grid">
+            <label for="rad-grid">Cartes</label>
+        </div>
+
+        <main id="students-list"> <!--id pour intégrer le tableau ou les cartes des apprenants via JS (DOM) + facilite la modification du style -->
+            <noscript>Utilisation de JavaScript pour afficher le tableau et les cartes des apprenants.</noscript>
+        </main>
+
+        <!-- la partie sur les modales avec les détails des apprenants -->
+        <div id="student-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-avatar">
+                        <img id="modal-avatar" src="" alt="Avatar">
+                    </div>
+                    <div class="modal-info">
+                        <h2 id="modal-name"></h2>
+                        <p><strong>Prénom :</strong> <span id="modal-prenom"></span></p>
+                        <p><strong>Ville :</strong> <span id="modal-ville"></span></p>
+                    </div>
+                </div>
+                <div class="modal-anecdotes">
+                    <h3>Anecdotes sur l'apprenant :</h3>
+                    <p id="modal-anecdotes"></p>
+                </div>
+            </div>
+        </div>
+
+        <script src="script/script.js"></script>
+
+    </body>
+
+</html>

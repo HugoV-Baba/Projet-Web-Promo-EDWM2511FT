@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script> (function() { const prefs = JSON.parse(localStorage.getItem("preferences")); const theme = prefs?.theme || "light"; if (theme === "dark") { document.documentElement.classList.add("dark"); } else { document.documentElement.classList.remove("dark"); } })(); </script>        
+        <link href="styles/style.css" rel="stylesheet" />
+        <link href="styles/pref.css" rel="stylesheet" />
+        <title>ENI École Informatique - Préférences</title>
+    </head>
+
+    <body data-page="pref">
+        
+        <header>
+
+            <img src="Ressources/logo.png" alt="Logo de l'ENI">
+
+            <h1>Promo EDWM2511FT</h1>
+
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="preferences.html">Préférences</a></li>
+                    <li><a href="carte.html">Carte</a></li>
+                    <li><a href="informations.html">Informations</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+
+            <fieldset>
+
+                <legend>Préférences du site</legend>
+
+                <form id="settings-form">
+
+                    <div id="grid-container-form">
+
+                        <label for="theme">Thème du site</label>
+                        <select name="theme" id="theme">
+                            <option value="light">Clair</option>
+                            <option value="dark">Sombre</option>
+                        </select>
+
+                        <label>Format d'affichage de la liste des apprenants</label>
+                        <div id="radio-display">
+                            <div>
+                                <input type="radio" name="radio-display" id="radio-list" checked>
+                                <label for="radio-list">Liste (Table)</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio-display" id="radio-grid">
+                                <label for="radio-grid">Cartes (Grid)</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="button-container">
+                        <a class="return-home" href="index.html">Retour à la page d'Accueil</a>
+                        <button class="return-home" type="submit">Enregistrer</button>
+                    </div>
+
+                </form>
+
+            </fieldset>
+
+        </main>
+        
+        <script src="script/mainStorage.js"></script>
+
+    </body>
+</html>

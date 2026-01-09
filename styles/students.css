@@ -1,0 +1,130 @@
+/* table */
+
+caption {
+    text-align: start;
+    font-size: x-large;
+    margin-block: 1vh;
+    color: var(--border-color);
+}
+
+table {
+    border-collapse: collapse;
+    border: 3px solid var(--border-color);
+    width: 60vw;
+    align-self: self-start;
+    
+}
+
+thead {
+    background-color: var(--med-color);
+}
+
+tbody {
+    display: block;
+    height: 25vw;
+    overflow-y: auto; 
+}
+
+thead th {
+    text-align: start;
+}
+
+tbody td {
+    padding: 0.75vw 10vw 0.75vw 0.25vw;
+    text-align: start;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--background-color);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--light-med-color);
+}
+
+thead, tbody tr {
+    display: table;
+    width: 100%; 
+    table-layout: fixed;
+}
+
+.students-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#students-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+}
+
+.display-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-right: 10vw;
+    margin-top: 3vh;
+    gap: 0.5em;
+    border: 0px;
+}
+
+.display-div p {
+    margin: 0;
+    padding-right: 0.5em;
+}
+
+.detail {
+    cursor: pointer;
+    padding: 0vw;
+    color: var(--about-color);
+}
+
+.detail:hover {
+    text-decoration: underline;
+}
+
+
+/*grille*/
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.2rem;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center; 
+}
+
+
+.student-card {
+    background-color: var(--light-med-color);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.student-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--front-color);
+}
+
+.student-card p {
+    margin: 0.1rem 0 0.5rem;
+    color: var(--front-color);
+}
+
+.detail-btn {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--med-color);
+    border-radius: 5px;
+    color: var(--front-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+

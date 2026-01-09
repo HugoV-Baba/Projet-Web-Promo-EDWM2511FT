@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script> (function() { const prefs = JSON.parse(localStorage.getItem("preferences")); const theme = prefs?.theme || "light"; if (theme === "dark") { document.documentElement.classList.add("dark"); } else { document.documentElement.classList.remove("dark"); } })(); </script>        
+        <link href="styles/style.css" rel="stylesheet" />
+        <link href="styles/infos.css" rel="stylesheet" />
+        <title>ENI École Informatique - Informations</title>
+    </head>
+
+    <body data-page="infos">
+
+        <header>
+
+            <img src="Ressources/logo.png" alt="Logo de l'ENI">
+
+            <h1>Promo EDWM2511FT</h1>
+
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="preferences.html">Préférences</a></li>
+                    <li><a href="carte.html">Carte</a></li>
+                    <li><a href="informations.html">Informations</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+
+            <div id="master-container">
+                <div id="main-info">
+                    <h2>* INFORMATIONS GÉNÉRALES *</h2>
+                    <h4>Formation du <strong>24/11/2025</strong> au <strong>22/05/2026</strong></h4>
+                    <h4>Nombre d'apprenants: <strong>14</strong></h4>
+                </div>
+                <div id="main-div-container">
+                    <div>
+                        <span>Description</span>
+                        <div class="info-border">
+                            <p>Découvrir et maîtriser les bases du développement web et web mobile, du back-end (Java Spring Boot, Node.js, PHP, Symfony) au front-end (HTML5, CSS, JavaScript, Angular), en passant par la programmation orientée objet.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Liens utiles</span>
+                        <div class="info-border">
+                            <a href="https://www.eni.fr/">Site de l'ENI</a>
+                            <a href="https://getbootstrap.com/">Bootstrap</a>
+                            <a href="https://picocss.com/">Pico CSS</a>
+                            <a href="https://openclassrooms.com/fr/">OpenClassRooms</a>
+                            <a href="https://flexboxfroggy.com/#fr">Jeu pour apprendre le CSS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="return-home" href="index.html">Retour à la page d'Accueil</a>
+
+        </main>
+
+    </body>
+</html>
